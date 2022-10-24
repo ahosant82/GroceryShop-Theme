@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>grosary shop</title>
+
+
+        <!--extranal link-->
+        <!--css link-->
+        <link rel="stylesheet" type="text/css" href="assect/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assect/css/style-mobile.css">
+        <link rel="stylesheet" type="text/css" href="assect/css/style-tab.css">
+        <!--icon linl-->
+        <link rel="stylesheet" type="text/css" href="assect/fontawesome-free-6.2.0-web/css/all.min.css">
+        <!--boostrap linl-->
+        <link rel="stylesheet" type="text/css" href="assect/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <script src="assect/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+
+        <!--swepper slide-->
+        <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+        <!--slick master-->
+        <link rel="stylesheet" type="text/css" href="assect/slick/slick.css"/>
+        <!--// Add the new slick-theme.css if you want the default styling-->
+        <link rel="stylesheet" type="text/css" href="assect/slick/slick-theme.css"/>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="assect/slick/slick.min.js"></script>
+        <script src="assect/js/custom-slide.js"></script>
+
+        
+        <!---jquery-->
+        <script src="assect/js/jquery3.4.1.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <div class="wrepper_area">
+            <div class="header_area">
+                <!--menu btn-->
+                <div onclick="menuBtn()" class="menu_btn col-lg-1 col-md-1">
+                    <i  class="fa-solid fa-bars open"></i>
+                    <i  class="fa-solid fa-times close"></i>
+                </div>
+                <!--main logo-->
+                <div class="main-logo col-lg-2 col-md-2">
+                    <a href="#"><img src="assect/img/main-logo/main-logo.png"></a>
+                </div>
+
+                <!--search area-->
+                <div class="search-area col-lg-6 col-md-5 col-9">
+                    <form action="" class="search-form">
+                        <input type="search" name="serach" placeholder="search for product (e.g: egg, meik, poteto)">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </form>
+                </div>
+                <!--costomar locetaion-->
+                <div class="customaer-locetion col-lg-1 col-md-2">
+                    <span class="area-icon"><i class="fa-solid fa-house"></i></span>
+                    <div class="area-name">
+                        <span class="name">Dhaka</span>
+                    </div>
+
+                    <span class="has-dropdown"><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+
+                <!--customer help-->
+                <div class="customer-help col-lg-1 col-md-1">
+                    <span><i class="fa-sharp fa-solid fa-question"></i></span>
+                    help
+                </div>
+
+                <!--account login-->
+                <div class="account-login col-sm-1 col-md-1">
+                    singn in
+                </div>
+                <!--if screen size is 750px-->
+                <div class="header-list col-lg-1">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+
+            <div class="cart">
+                <div class="inner-section">
+                    <div class="item">
+                        <i class="fa-sharp fa-solid fa-cart-arrow-down"></i>
+                        <div class="item-count">
+                            <span class="item-number">0</span>
+                            <span class="item-name">items</span>
+                        </div>
+
+                    </div>
+                    <div class="cart-ammount">
+                        <span>৳</span>
+                        <span class="ammount">000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--main-content-->
+            <div class="main-content">
+                <div class="sidebar">
+                    <div class="inner-section">
+                        <!--shop section-->
+                        <div class="shop-section">
+                            <!--for grocery shop-->
+                            <button type="submit" class="shop-list active grocery-shop" id=" grocery-shop">
+                                <div class="shop-icon">
+                                    <i class="fa-solid fa-egg"></i>
+                                </div>
+    
+                                <div class="shop-name">gocery</div>
+                            </button>
+    
+                            <!--for pharmecy shop-->
+                            <button type="submit" class="shop-list pharmecy-shop">
+                                <div class="shop-icon">
+                                    <i class="fa-solid fa-stethoscope"></i>                            
+                                </div>
+    
+                                <div class="shop-name">pharmecy</div>
+                            </button>
+    
+                            <!--home appliance-->
+    
+                            <button type="submit" class="shop-list home-appliance">
+                                <div class="shop-icon">
+                                    <i class="fa-solid fa-kitchen-set"></i>
+                                </div>
+    
+                                <div class="shop-name">appliance</div>
+                            </button>
+                        </div>
+
+                        <hr>
+
+                        <!--for grocery shop-->
+
+                        <div class="groceryShop">
+                            <div class="shop-menu">
+                                <ul class="menu">
+                                    <li class="menuItem active"><a class="linkItem" href="#">offers</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Daily Deals</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Popular</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Flash Sales</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Food</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Cleaning Supplies</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Personal Care</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Health & Wellness</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Baby Care</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Home & Kitchen</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Stationery & Office</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Pet Care</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Toys & Sports</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Beauty & MakeUp</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Beauty & MakeUp</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Beauty & MakeUp</a></li>
+ 
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--for pharmecy shop-->
+
+                        <div class="pharmecyShop">
+                            <div class="shop-menu">
+                                <ul class="menu">
+                                    <li class="menuItem active"><a class="linkItem" href="#">napa</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Daily Deals</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Popular</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Flash Sales</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Food</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Cleaning Supplies</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Personal Care</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Health & Wellness</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Baby Care</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Home & Kitchen</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Stationery & Office</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Pet Care</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Toys & Sports</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Beauty & MakeUp</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--for home appliance shop-->
+
+                        <div class="applianceShop">
+                            <div class="shop-menu">
+                                <ul class="menu">
+                                    <li class="menuItem active"><a class="linkItem" href="#">helloe</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Daily Deals</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Popular</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Flash Sales</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Food</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Cleaning Supplies</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Personal Care</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Health & Wellness</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Baby Care</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Home & Kitchen</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Stationery & Office</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Pet Care</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Toys & Sports</a></li>
+                                    <li class="menuItem"><a class="linkItem" href="#">Beauty & MakeUp</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--content-->
+                <div class="content">
+                    <!--bennar section-->
+                    <div class="banner-section">
+                        <div class="inner-section">
+                            <div class="bennar-txt">
+                                <h1>Groceries delivered in 30 minutes</h1>
+                            </div>
+                            <form action="" class="search-form">
+                                <input type="search" name="serach" placeholder="search for product (e.g: egg, meik, poteto)">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!--Categories section-->
+                    <div class="container categories-section">
+                        <div class="sec-title">our product Categories</div>
+
+                        <div class="inner-section">
+                            <!--categories item-->
+                            <div class="col-lg-4 col-md-6 col-12 categories-item">
+                                <div class="inner-item">
+                                    <a href="#">
+                                        <div class="item-name">deaily Deals</div>
+                                        <div class="item-icon"><img src="assect/img/categories-icon/rice-svgrepo-com.svg" alt=""></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--categories item-->
+                            <div class="col-lg-4 col-md-6 col-12 categories-item">
+                                <div class="inner-item">
+                                    <a href="#">
+                                        <div class="item-name">Fruits and Vegetables</div>
+                                        <div class="item-icon"><img src="assect/img/categories-icon/mango-svgrepo-com.svg" alt=""></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--categories item-->
+                            <div class="col-lg-4 col-md-6 col-12 categories-item">
+                                <div class="inner-item">
+                                    <a href="#">
+                                        <div class="item-name">meat and fish</div>
+                                        <div class="item-icon"><img src="assect/img/categories-icon/meat-svgrepo-com.svg" alt=""></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--categories item-->
+                            <div class="col-lg-4 col-md-6 col-12 categories-item">
+                                <div class="inner-item">
+                                    <a href="#">
+                                        <div class="item-name">beverage items</div>
+                                        <div class="item-icon"><img src="assect/img/categories-icon/beverage-box-svgrepo-com.svg" alt=""></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--categories item-->
+                            <div class="col-lg-4 col-md-6 col-12 categories-item">
+                                <div class="inner-item">
+                                    <a href="#">
+                                        <div class="item-name">cooking</div>
+                                        <div class="item-icon"><img src="assect/img/categories-icon/cooking-svgrepo-com.svg" alt=""></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--categories item-->
+                            <div class="col-lg-4 col-md-6 col-12 categories-item">
+                                <div class="inner-item">
+                                    <a href="#">
+                                        <div class="item-name">homr and ckeaning</div>
+                                        <div class="item-icon"><img src="assect/img/categories-icon/cleaner-svgrepo-com.svg" alt=""></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--categories item-->
+                            <div class="col-lg-4 col-md-6 col-12 categories-item">
+                                <div class="inner-item">
+                                    <a href="#">
+                                        <div class="item-name">pest control</div>
+                                        <div class="item-icon"><img src="assect/img/categories-icon/mosquito-net-insect-mosquito-pest-svgrepo-com.svg" alt=""></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--categories item-->
+                            <div class="col-lg-4 col-md-6 col-12 categories-item">
+                                <div class="inner-item">
+                                    <a href="#">
+                                        <div class="item-name">Beauty product</div>
+                                        <div class="item-icon"><img src="assect/img/categories-icon/hand-mirror-beauty-svgrepo-com.svg" alt=""></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--categories item-->
+                            <div class="col-lg-4 col-md-6 col-12 categories-item">
+                                <div class="inner-item">
+                                    <a href="#">
+                                        <div class="item-name">stationary and Office</div>
+                                        <div class="item-icon"><img src="assect/img/categories-icon/rubber-bands-stationery-svgrepo-com.svg" alt=""></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--categories item-->
+                            <div class="col-lg-4 col-md-6 col-12 categories-item">
+                                <div class="inner-item">
+                                    <a href="#">
+                                        <div class="item-name">Kitchen appliance</div>
+                                        <div class="item-icon"><img src="assect/img/categories-icon/cooking-svgrepo-com.svg" alt=""></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--categories item-->
+                            <div class="col-lg-4 col-md-6 col-12 categories-item">
+                                <div class="inner-item">
+                                    <a href="#">
+                                        <div class="item-name">health care</div>
+                                        <div class="item-icon"><img src="assect/img/categories-icon/health-care-svgrepo-com.svg" alt=""></div>
+                                    </a>
+                                </div>
+                            </div>
+                             <!--categories item-->
+                             <div class="col-lg-4 col-md-6 col-12 categories-item">
+                                <div class="inner-item">
+                                    <a href="#">
+                                        <div class="item-name">health care</div>
+                                        <div class="item-icon"><img src="assect/img/categories-icon/health-care-svgrepo-com.svg" alt=""></div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--how to shopping on hatbazar-->
+                    <div class="container order-procces">
+                        <div class="inner-section">
+                            <div class="sec-title">How to order from Chaldal ?</div>
+
+                              <!-- Carousel -->
+                            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                                <!-- Indicators/dots -->
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                                  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                                  <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                                </div>
+                                
+                                <!-- The slideshow/carousel -->
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="assect/img/bennar/tutorial-1.webp" alt="Los Angeles" class="d-block" style="width:100%">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="assect/img/bennar/tutorial-2.webp" alt="Chicago" class="d-block" style="width:100%">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="assect/img/bennar/tutorial-3.webp" alt="New York" class="d-block" style="width:100%">
+                                  </div>
+                                </div>
+                                
+                                <!-- Left and right controls/icons -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Special Offers-->
+                    <div class="container special-offers">
+                        <div class="inner-section">
+                            <div class="sec-title">Special Offers</div>
+                            <!--offer slide-->
+                            <div class="offer-cart">
+                                <div class="cart-slide">
+                                    <!--offer-item-->
+                                    <div class="offer-item">
+                                        <div class="inner-section">
+                                            <!--image block-->
+                                            <div class="img-block">
+                                                <img src="assect/img/offer-product/nestle-kitkat-chunky-white-chocolate-bar-40-gm-2-pcs.webp" alt="">
+                                            </div>
+                                            <!--content block-->
+                                            <div class="product-block">
+                                                <div class="product-details">
+                                                    <div class="product-img">
+                                                        <img src="assect/img/offer-product/nestle-kitkat-chunky-white-chocolate-bar-40-gm-2-pcs (1).webp" alt="">
+                                                    </div>
+                                                    <div class="product-name">
+                                                        nestle kitkat chunky white chocolate bar 40 gm
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span class="offer-price">৳90 <span class="main-price">৳190</span></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="order-btn">
+                                                    <button><i class="fa-solid fa-bolt"></i>add to bag</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--offer-item-->
+                                    <div class="offer-item">
+                                        <div class="inner-section">
+                                            <!--image block-->
+                                            <div class="img-block">
+                                                <img src="assect/img/offer-product/nestle-kitkat-chunky-white-chocolate-bar-40-gm-2-pcs.webp" alt="">
+                                            </div>
+                                            <!--content block-->
+                                            <div class="product-block">
+                                                <div class="product-details">
+                                                    <div class="product-img">
+                                                        <img src="assect/img/offer-product/nestle-kitkat-chunky-white-chocolate-bar-40-gm-2-pcs (1).webp" alt="">
+                                                    </div>
+                                                    <div class="product-name">
+                                                        nestle kitkat chunky white chocolate bar 40 gm
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span class="offer-price">৳90 <span class="main-price">৳190</span></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="order-btn">
+                                                    <button><i class="fa-solid fa-bolt"></i>add to bag</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--offer-item-->
+                                    <div class="offer-item">
+                                        <div class="inner-section">
+                                            <!--image block-->
+                                            <div class="img-block">
+                                                <img src="assect/img/offer-product/nestle-kitkat-chunky-white-chocolate-bar-40-gm-2-pcs.webp" alt="">
+                                            </div>
+                                            <!--content block-->
+                                            <div class="product-block">
+                                                <div class="product-details">
+                                                    <div class="product-img">
+                                                        <img src="assect/img/offer-product/nestle-kitkat-chunky-white-chocolate-bar-40-gm-2-pcs (1).webp" alt="">
+                                                    </div>
+                                                    <div class="product-name">
+                                                        nestle kitkat chunky white chocolate bar 40 gm
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span class="offer-price">৳90 <span class="main-price">৳190</span></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="order-btn">
+                                                    <button><i class="fa-solid fa-bolt"></i>add to bag</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--offer-item-->
+                                    <div class="offer-item">
+                                        <div class="inner-section">
+                                            <!--image block-->
+                                            <div class="img-block">
+                                                <img src="assect/img/offer-product/nestle-kitkat-chunky-white-chocolate-bar-40-gm-2-pcs.webp" alt="">
+                                            </div>
+                                            <!--content block-->
+                                            <div class="product-block">
+                                                <div class="product-details">
+                                                    <div class="product-img">
+                                                        <img src="assect/img/offer-product/nestle-kitkat-chunky-white-chocolate-bar-40-gm-2-pcs (1).webp" alt="">
+                                                    </div>
+                                                    <div class="product-name">
+                                                        nestle kitkat chunky white chocolate bar 40 gm
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span class="offer-price">৳90 <span class="main-price">৳190</span></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="order-btn">
+                                                    <button><i class="fa-solid fa-bolt"></i>add to bag</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--our mistion-->
+                    <div class="company-mition">
+                        <div class="sec-title">Why People <i class="fa-solid fa-heart"></i> hatBazar</div>
+                        <div class="inner-section">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-12 title">
+                                    <div class="title-img">
+                                        <img src="assect/img/our-misson/lp-features-1.webp" alt="">
+                                    </div>
+
+                                    <div class="titleTxt">
+                                        <h1>Convenient & Quick</h1>
+
+                                        <p>No waiting in traffic,
+                                            no haggling, no worries carrying groceries,
+                                             they're delivered right at your door.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-12 title">
+                                    <div class="title-img">
+                                        <img src="assect/img/our-misson/lp-features-2.webp" alt="">
+                                    </div>
+
+                                    <div class="titleTxt">
+                                        <h1>Freshly Picked</h1>
+
+                                        <p>Our fresh produce is sourced every morning, you get the best from us.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-12 title">
+                                    <div class="title-img">
+                                        <img src="assect/img/our-misson/lp-features-3.webp" alt="">
+                                    </div>
+
+                                    <div class="titleTxt">
+                                        <h1>A wide range of Products</h1>
+
+                                        <p>With 4000+ Products to choose from, forget scouring those aisles for hours.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--client review-->
+                    <div class="container">
+                        <div class="sec-title">What our clients are saying</div>
+                        <div class="client-review">
+                            <div class="client-slide">
+                                <div class="client">
+                                    <div class="inner-section">
+                                        <div class="col-lg-3 client-info">
+                                            <div class="client-img">
+                                                <img src="assect/img/client-info/blank-profile-picture-973460__340.webp" alt="">
+                                            </div>
+                                            <div class="client-name">mr. x rahman</div>
+                                        </div>
+        
+                                        <div class="col-lg-8 client-msg">
+                                            I have been shopping from chaldal for the past few months and i am loving the experience. Have been shopping from here and i have recommended my relatives too. They are also happy with the service. The prices are comparatively low and the products are genuine.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="client">
+                                    <div class="inner-section">
+                                        <div class="col-lg-3 client-info">
+                                            <div class="client-img">
+                                                <img src="assect/img/client-info/blank-profile-picture-973460__340.webp" alt="">
+                                            </div>
+                                            <div class="client-name">mr. x rahman</div>
+                                        </div>
+        
+                                        <div class="col-lg-8 client-msg">
+                                            I have been shopping from chaldal for the past few months and i am loving the experience. Have been shopping from here and i have recommended my relatives too. They are also happy with the service. The prices are comparatively low and the products are genuine.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--corporate-->
+                    <div class="corporate">
+                        <div class="inner-section">
+                            <div class="container">
+                                <div class="corporateTitle">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <h2>Do you own a business?</h2>
+                                    <h3>Become a Corporate Customer</h3>
+                                </div>
+
+                                <div class="corporateVisson">
+                                    <div class="box">
+                                        <i class="fa-solid fa-check check"></i>
+                                        <div class="box-icon">
+                                            <i class="fa-regular fa-money-bill-1"></i>
+                                        </div>
+                                        
+                                        <div class="box-txt">
+                                            Special Corporate Prices
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <i class="fa-solid fa-check check"></i>
+                                        <div class="box-icon">
+                                            <i class="fa-solid fa-headset"></i>
+                                        </div>
+                                        
+                                        <div class="box-txt">
+                                            24 Hour Support
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <i class="fa-solid fa-check check"></i>
+                                        <div class="box-icon">
+                                            <i class="fa-solid fa-truck-fast"></i>
+                                        </div>
+                                        
+                                        <div class="box-txt">
+                                            Flexible Delivery
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="more-details-btn">
+                                    <button>FIND OUT MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--our app content-->
+                    <div class="get-our-app container">
+                        <div class="inner-section">
+                            <div class="app-content">
+                                <div class="sec-title">Be a part of our family</div>
+
+                                <div class="get-link">
+                                    <img src="assect/img/bennar/bd-flag.png" alt="">
+                                    <input type="tel" value="+880">
+                                    <input type="submit" value="get app">
+                                </div>
+
+                                <div class="app-link">
+                                    <a href="#"><img src="assect/img/bennar/lp_getandroidapp.webp" alt="android-app"></a>
+                                    <a href="#"><img src="assect/img/bennar/lp_getappleapp.webp" alt="aplle-app"></a>
+                                </div>
+                            </div>
+
+                            <div class="demo-app">
+                                <img src="assect/img/bennar/lp_iphone_nexus.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--our warehouse-->
+                    <div class="our-shops bg-dark">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12 wareHouses">
+                                <img src="assect/img/bennar/chaldal_new_warehouses.webp" alt="">
+                            </div>
+    
+                            <div class="col-lg-6 col-sm-12 wareHouses"></div>
+                        </div>
+                    </div>
+
+                    <!--delivary section-->
+                    <div class="ourDelivaryService">
+                        <div class="container">
+                            <div class="inner-section ">
+                                <div class="col-lg-6 col-sm-12 d-flex text-start delivery">
+                                    <div class="delevery-time">
+                                        <img src="assect/img/svg/delivary-time.webp" alt="">
+                                        <span>30 minute delivery</span>
+                                    </div>
+    
+                                    <div class="payment">
+                                        <img src="assect/img/svg/cash-on-delivery.webp" alt="">
+                                        <span>cash on delevary</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12 text-end payment-partner">
+                                    <span>pay with : </span>
+    
+                                    <img src="assect/img/svg/COD.webp" alt="cash on delevary">
+                                    <img src="assect/img/svg/mastercard.webp" alt="mastercard">
+                                    <img src="assect/img/svg/VIsa.webp" alt="vissa">
+                                    <img src="assect/img/svg/bkash.webp" alt="bkash">
+                                    <img src="assect/img/svg/NagadLogo.webp" alt="Nagad">
+                                    <img src="assect/img/svg/Amex.webp" alt="Amex">
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--footerArea-->
+                    <footer class="footerArea">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-7 col-sm-12 footerLeft">
+                                    <div class="footer-top">
+                                        <figure class="footer-logo">
+                                            <img src="assect/img/main-logo/main-logo.png" alt="website-logo">
+                                        </figure>
+
+                                        <div class="footer-descripttion">
+                                            <p>
+                                                Chaldal.com is an online shop available in Dhaka, Chattogram, Jashore, Khulna, Sylhet, Gazipur, Rajshahi and Narayanganj. We believe time is valuable to our fellow residents, and that they should not have to waste hours in traffic, brave bad weather and wait in line just to buy basic necessities like eggs! This is why Chaldal delivers everything you need right at your door-step and at no additional cost.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-sm-12 footerRight">fgfddshjsdfh</div>
+                            </div>
+                        </div>
+                    </footer>
+
+                </div>
+
+            </div>
+        </div>
+
+        <script src="assect/js/script.js"></script>
+        <script src="assect/js/custom-slide.js"></script>
+        
+        <!--slick master-->
+
+        <link rel="stylesheet" type="text/css" href="assect/slick/slick.css"/>
+        <!--// Add the new slick-theme.css if you want the default styling-->
+        <link rel="stylesheet" type="text/css" href="assect/slick/slick-theme.css"/>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="assect/slick/slick.min.js"></script>
+        <script src="assect/js/custom-slide.js"></script>
+
+        
+        <!---jquery-->
+        <script src="assect/js/jquery3.4.1.js"></script>
+    </body>
+</html>

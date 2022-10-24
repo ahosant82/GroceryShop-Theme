@@ -1,0 +1,69 @@
+@media screen and (max-width: 767px) {
+
+    .main-logo,.customaer-locetion,.customer-help,.account-login{
+        display: none;
+    }
+
+    .cart{
+        display: flex;
+    }
+
+    .sidebar{
+        margin: 0 auto;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 99;
+        display: none;
+        background-color: rgba(0, 0, 0, .2);
+    }
+    .sidebar .inner-section{
+        width: 80%;
+    }
+    
+    .content{
+        width: 100%;
+        position: absolute;
+        right: 0;
+    }
+
+    /**/
+
+    .offer-item{
+        padding: .4rem;
+    }
+
+    .offer-item .inner-section{
+        display: block;
+    }
+
+    .offer-item .img-block{
+        width: 100%;
+    }
+
+    .offer-item .product-block{
+        width: 100%;
+    }
+    .client .inner-section{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 567px) {
+
+    .banner-section .inner-section{
+        margin-top: 3.8rem;
+    }
+    .bennar-txt h1{
+        font-size: 1.4rem;
+    }
+    .banner-section .search-form{
+        width: 90%;
+
+    }
+
+    /**/
+    .categories-section .inner-section{
+        padding: 1rem .4rem;
+    }
+}
