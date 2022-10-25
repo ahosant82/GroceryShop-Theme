@@ -584,7 +584,7 @@
 }
 
 .ourDelivaryService{
-    background-color: #eee;
+    background-color: #ddd;
 }
 .ourDelivaryService .inner-section{
     display: flex;
@@ -599,5 +599,80 @@
 }
 /**/
 .footerArea{
-    background-color: #ddd;
+    background-color: #eee ;
+    padding: 0 2rem 6rem;
+}
+
+.footerLeft{
+    border-right: 1px solid rgb(190, 190, 190);
+    padding: 1rem 0;
+}
+
+.footerMenu{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footerMenu h2{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    font-family: 'Fuzzy Bubbles', cursive;
+    padding: .4rem 0;
+}
+.footerMenu ul{
+    text-align: left;
+    
+
+}
+
+.footerMenu ul li{
+    list-style: none;
+    text-transform: capitalize;
+    margin-left: .5rem;
+    padding: .2rem;
+}
+
+.footerMenu ul li a{
+    color: rgb(90, 90, 90);
+    text-decoration: none;
+}
+.footerRight{
+    text-align: right;
+}
+.footerRight .app-link{
+    display: flex;
+    text-align: left;
+    margin: 1rem 0;
+}
+.footerRight .app-link img{
+    width: 170px;
+}
+
+.footerRight .phone{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.footerRight .socal-midea .fa-brands{
+    font-size: 2rem;
+    margin: .5rem .1rem;
+}
+.facebook{
+    color: #4F77BE;
+}
+
+.youtube{
+    color: #EC3B35;
+}
+
+.twitter{
+    color: #4ABFE5;
+}
+
+.instagram{
+    color: #fff;
+    border-radius: .5rem;
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);  color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
