@@ -60,3 +60,40 @@ homeAppliebinceBtn.addEventListener('click', () => {
         
     }
 });
+
+/// user admin open
+let userAdminOpen = document.querySelector('.header-list');
+let userAdmin = document.querySelector('.user-admin');
+
+userAdminOpen.addEventListener('click', () => {
+    if (userAdmin.style.display = "none") {
+        userAdmin.style.display = 'block';
+
+    }
+    else{
+        userAdmin.style.display = "none";
+    }
+
+});
+//userAdmin close
+$(document).ready(function(){
+    $(".close").click(function(){
+      $('.user-admin').hide(400);
+      $('.cartPage').hide(400);
+    });
+});
+
+//cartPage
+$(document).ready(function(){
+    $(".cart").click(function(){
+      $('.cartPage').show(400);
+    });
+});
+
+//discountbtn
+
+$(document).ready(function(){
+    $(".discountBtn").click(function(){
+      $('.discountCode').toggle(400);
+    });
+});

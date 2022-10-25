@@ -202,7 +202,7 @@
     background-color: rgba(0,0,0,.5);
 }
 
-.cart .item{
+.cart .itemCount{
     text-align: center;
     padding: .3rem 0;
     color: var(--header_bg);
@@ -216,6 +216,99 @@
 }
 .cart-ammount i{
     color: royalblue;
+}
+
+.cartPage{
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+    z-index: 999;
+    background-color: white;
+    right: 0;
+    display: none;
+}
+
+.cartPage .itemCount{
+    text-align: left;
+    display: flex;
+    margin: 0;
+    width: 7rem;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}
+.cartPage .delevary-notice{
+    color: #fff;
+    padding: .2rem 1rem;
+    text-transform: capitalize;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 800;
+    font-size: .9rem;
+}
+
+.cartPage .delevary-notice i{
+    float: right;
+    padding: .3rem 0;
+
+}
+
+.cartPage .productInfo{
+    height: 50vh;
+    background-color: #fff;
+    overflow: auto;
+}
+
+.cartPage .productInfo .inner-section{
+    height: 100vh;
+}
+
+/**/
+.discountSection{
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgb(241, 239, 239);
+}
+.discountBtn{
+    padding: .2rem 0;
+    cursor: pointer;
+}
+
+.discountBtn:hover{
+    background-color: rgba(221,221,221,1);
+}
+.discountCode{
+    padding: 1rem 0;
+    display: none;
+}
+.discountCode input{
+    border: none;
+    background-color: rgba(221,221,221,1);
+    border-radius: 4px;
+    padding: .3rem 1rem;
+}
+
+.discountCode input[type='button'] {
+    background-color: #ff686e;
+    color: #fff;
+    text-transform: capitalize;
+    border-radius: 0 0.3rem 0.3rem 0;
+}
+
+.placeOrderSection{
+    background-color: #E04F54;
+    margin: .3rem 2rem;
+}
+.placeOrderSection button{
+    border: none;
+    background-color: #ff686e;
+    padding: .4rem 2rem;color: rgba(255,255,255,1);
+    text-transform: capitalize;
+}
+
+.placeOrderSection .cartBill{
+    color: rgba(255,255,255,1);
+
+
 }
 /*    background-color: rgba(255,255,255,1);
 */
@@ -675,4 +768,75 @@
     color: #fff;
     border-radius: .5rem;
     background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);  color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+/*--if screen size has 768 or mobile display then--*/
+.buttom-menu{
+    background-color: #ff686e;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    box-shadow: 0 -1px 10px #ccc;
+
+}
+.buttom-menu button{
+    border: none;
+    padding: .5rem 0;
+}
+.buttom-menu .cart,
+.buttom-menu .cheting{
+    position: relative;
+    background-color: #fff;
+    width: 20%;
+    border-radius: 0;
+}
+.buttom-menu .startShopping{
+    width: 60%;
+    background-color: transparent;
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+.user-admin{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    top: 0;
+    background-color: whitesmoke;
+    right: 0;
+    display: none;
+}
+
+.user-admin .header, .cartPage .header{
+    background-color: #e4e0e1;
+    height: 3rem;
+    padding: .5rem 1rem;
+}
+
+.user-admin .logo h3{
+    font-family: 'Freehand', cursive
+}
+.user-admin .close,.cartPage .close{
+    float: right;
+    background: transparent;
+    padding: 0 1rem;
+    text-transform: capitalize;
+    border: 1px solid rgb(102, 101, 101);
+}
+
+.user-admin .menu li{
+    list-style: none;
+    padding: .5rem 0;
+    text-transform: capitalize;
+}
+
+.user-admin li a{
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+.user-admin .menu i{
+    padding: 0 1rem 0 0;
 }

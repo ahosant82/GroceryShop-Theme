@@ -4,10 +4,6 @@
         display: none;
     }
 
-    .cart{
-        display: flex;
-    }
-
     .sidebar{
         margin: 0 auto;
         width: 100%;
@@ -47,6 +43,40 @@
     .client .inner-section{
         display: block;
     }
+
+    /**/
+    .app-link {
+        text-align: center;
+    }
+
+    /**/
+
+    /**/
+    .footerLeft{
+        border-right: none;
+        text-align: center;
+    }
+
+    .footerMenu{
+        display: block;
+    }
+    .footerMenu ul{
+        text-align: center;
+        padding: 0;
+    }
+
+    .footerRight {
+        text-align: center;
+    }
+
+    /*--if screen size has 768 or mobile display then--*/
+    .buttom-menu{
+        background-color: #ff686e;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 567px) {
@@ -65,5 +95,10 @@
     /**/
     .categories-section .inner-section{
         padding: 1rem .4rem;
+    }
+
+    /**/
+    .footerRight .app-link img {
+        width: 140px;
     }
 }
