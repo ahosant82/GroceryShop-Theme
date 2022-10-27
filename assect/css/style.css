@@ -225,7 +225,7 @@
     z-index: 999;
     background-color: white;
     right: 0;
-    display: none;
+    display: ;
 }
 
 .cartPage .itemCount{
@@ -260,6 +260,26 @@
 
 .cartPage .productInfo .inner-section{
     height: 100vh;
+}
+
+/**/
+.productInfo .cartItem .table tr{
+}
+.poduct-img{
+    width: 2rem;
+}
+
+.product-title{
+    text-transform: capitalize;
+}
+
+.productInfo .qty input{
+    width: 3rem;
+    text-align: center;
+}
+
+.product-subTotal{
+    width: 4rem;
 }
 
 /**/
@@ -441,6 +461,7 @@
     color: rgb(29, 29, 29);
     font-size: .9rem;
     text-decoration: line-through;
+    display: none;
 }
 
 .product-block .order-btn{
