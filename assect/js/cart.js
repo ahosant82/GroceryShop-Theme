@@ -42,13 +42,15 @@ function cartsNumbers(products){
 //
 var removeBtn = document.getElementsByClassName('remove-btn');
 
-for (i = 0; i < removeBtn.length ; i++){
-  removeBtn[i].addEventListener('click' , removeBtns)
-}
+// for (i = 0; i < removeBtn.length ; i++){
+//   removeBtn[i].addEventListener('click' , removeBtns)
+// }
 
 function removeBtns(event) {
   var e = event.target;
   var parents = e.parentElement.parentElement.parentElement.remove()
+
+  grandTotal()
 }
 
 //
@@ -67,6 +69,8 @@ function addToCarts(event) {
   var price = addToCartEl.children[0].children[2].children[0].innerText;
 
   addToCartUpdate(imgName, titleName, price)
+
+  
 }
 var tbody = document.getElementsByTagName('tbody')[0]
 
@@ -88,10 +92,11 @@ function addToCartUpdate(imgName, titleName, price) {
 <td><img class="poduct-img" src="${imgName}" alt=""></td>
 <td><div class="product-title">${titleName}</div></td>
 <td><div class="product-price">${price}</div></td>
-<td><div class="sub-price"></div></td>
+<td><div class="sub-total">${price}</div></td>
 <td><div class="remove-btn"><i  class="fa-solid fa-times"></i></div></td>`
 
 tbody.append(createElement);
+
 for (i = 0; i < qtyUpdate.length ; i++){
   qtyUpdate[i].addEventListener('click' , updateQty)
 }
@@ -99,9 +104,7 @@ for (i = 0; i < qtyUpdate.length ; i++){
 for (i = 0; i < removeBtn.length ; i++){
   removeBtn[i].addEventListener('click' , removeBtns)
 }
-
-total()
-
+grandTotal()
 }
 
 var qtyUpdate = document.getElementsByClassName('qty-count');
@@ -113,25 +116,27 @@ function updateQty(event) {
 
  var productPrice = parentEle.getElementsByClassName('product-price')[0];
  var productPrices = productPrice.innerText.replace('৳', '');
- var subTotal = parentEle.getElementsByClassName('sub-price')[0]
+ var subTotal = parentEle.getElementsByClassName('sub-total')[0];
 
- subTotal.innerText ='৳'+ updateQtyEle.value * productPrices;
+ subTotal.innerHTML ='৳'+ updateQtyEle.value * productPrices;
 
- if (isNaN(updateQtyEle.value) || updateQtyEle.value<= 0 ) {
+ if (isNaN(updateQtyEle.value) || updateQtyEle.value < 0 ) {
    updateQtyEle.value = 1;
  }
- total()
+ grandTotal()
 }
 
-function total() {
-  var total = 111;
-  var grends = document.getElementsByClassName('cartBill')[0];
-  var updates = document.getElementsByClassName('sub-price')[0];
-  for(i = 0; i > updates.length ; i++){
-    var updatesAmmount = parseInt(updates[i].innerText.replace('৳' , ''));
-    total =+ updatesAmmount;
+function grandTotal() {
+  var total = 0;
+  var grands = document.querySelectorAll('.grand-total')[0];
+  var updates = document.getElementsByClassName('sub-total');
+  for (i = 0; i < updates.length; i++){
+    var updatesAmount = parseInt(updates[i].innerText.replace('৳', ''));
+    total += updatesAmount;
 
   }
-  grends.innerHTML = '৳' + total;
-
+  grands.innerHTML = '৳' + total;
 }
+// //
+
+

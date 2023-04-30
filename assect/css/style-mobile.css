@@ -18,9 +18,8 @@
     }
     
     .content{
-        width: 100%;
-        position: absolute;
-        right: 0;
+        width: 100% !important;
+        margin: 0;
     }
 
     /**/

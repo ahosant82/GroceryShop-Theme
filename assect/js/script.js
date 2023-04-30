@@ -1,17 +1,23 @@
 //sidebar open close
 let sidebar= document.querySelector(".sidebar");
 let content= document.querySelector(".content");
+let footer= document.querySelector(".footerArea");
 let isshow = true;
 function menuBtn(){
     if(isshow) {
         sidebar.style.display = "none";
         isshow = false;
         content.style.width = "100%";
-
+        footer.style.width = "100%";
+        content.style.margin = '0';
+        footer.style.margin = '0';
     }
     else{
         content.style.width = "80%";
+        footer.style.width = "80%";
         sidebar.style.display = "block";
+        content.style.margin = '0 0 0 20%';
+        footer.style.margin = '0 0 0 20%';
         isshow = true;
     }
 }
@@ -97,3 +103,5 @@ $(document).ready(function(){
       $('.discountCode').toggle(400);
     });
 });
+
+
